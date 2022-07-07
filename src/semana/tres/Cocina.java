@@ -6,6 +6,21 @@ public abstract class Cocina {
     private String utenciliosCocina;
     private String postres;
     private int costo;
+
+    public Cocina(String comida, String utenciliosCocina, String postres, int costo) {
+        this.comida = comida;
+        this.utenciliosCocina = utenciliosCocina;
+        this.postres = postres;
+        this.costo = costo;
+    }
+    
+    public Cocina() {
+
+    }
+    
+    
+
+    
     
     public void prepararArroz(){
         System.out.println("Preparando arroz general...");
@@ -43,6 +58,11 @@ public abstract class Cocina {
 
     public void setCosto(int costo) {
         this.costo = costo;
+    }
+
+    @Override
+    public String toString() {
+        return "Cocina{" + "comida=" + comida + ", utenciliosCocina=" + utenciliosCocina + ", postres=" + postres + ", costo=" + costo + '}';
     }
     
     

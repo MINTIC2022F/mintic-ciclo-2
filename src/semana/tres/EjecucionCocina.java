@@ -13,10 +13,23 @@ public class EjecucionCocina {
     
     public static void main(String[] args) {
         CocinaColombiana col = new CocinaColombiana("Maiz pelao");
-        //col.set
-        System.out.println(col.getTipoMaiz());
+        CocinaColombiana col2=new CocinaColombiana("Maiz verde", "Arepa", "Tenedor", 
+                "POstre de limón", 15000);
         
-    
+        CocinaItaliana coita=new CocinaItaliana("Doble crema");
+        
+        col.setCosto(10000);
+        System.out.println(col2);
+        
+        col.prepararPasta();
+        coita.prepararPasta();
+        
+        System.out.println(CocinaItaliana.obtenerNombreChef());
+        System.out.println(CocinaItaliana.SALARIO);
+        col.prepararArroz();
+        coita.prepararArroz();
+        System.out.println(coita.prepararSalsas("Picante"));
+        
     }
     
 }

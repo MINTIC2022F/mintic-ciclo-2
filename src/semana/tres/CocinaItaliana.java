@@ -9,17 +9,27 @@ package semana.tres;
  *
  * @author cdani
  */
-public class CocinaItaliana extends  Cocina{
-    
+public class CocinaItaliana extends Cocina {
+
     private String tipoQueso;
+    final static int SALARIO = 100;
 
     public CocinaItaliana(String tipoQueso) {
         this.tipoQueso = tipoQueso;
     }
-    
-    public String prepararSalsas(){
+
+    public String prepararSalsas() {
         return "Preparando la salsa...";
-               
+
+    }
+
+    public String prepararSalsas(String ingredientes) {
+        return "Preparando la salsa con "+ingredientes;
+
+    }
+
+    public static String obtenerNombreChef() {
+        return "Mario";
     }
 
     public String getTipoQueso() {
@@ -34,5 +44,5 @@ public class CocinaItaliana extends  Cocina{
     public void prepararPasta() {
         System.out.println("Prepatando pasta ITALIANA...");
     }
-    
+
 }

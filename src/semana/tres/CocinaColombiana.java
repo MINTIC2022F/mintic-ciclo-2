@@ -9,20 +9,31 @@ package semana.tres;
  *
  * @author cdani
  */
-public class CocinaColombiana extends Cocina{
-    
+public class CocinaColombiana extends Cocina {
+
     private String tipoMaiz;
 
-    public CocinaColombiana(String tipoMaiz) {
+    public CocinaColombiana(String tipoMaiz, String comida, String utenciliosCocina,
+            String postres, int costo) {
+        super(comida, utenciliosCocina, postres, costo);
         this.tipoMaiz = tipoMaiz;
     }
-    
-    public String prepararRellenoArepa(){
-        return "el relleno se preparó...";
-                
+
+    public CocinaColombiana(String tipoMaiz) {
+        super();
+        this.tipoMaiz = tipoMaiz;
     }
-    
-    public boolean rellenarArepa(){
+
+    public CocinaColombiana() {
+        super();
+    }
+
+    public String prepararRellenoArepa() {
+        return "el relleno se preparó...";
+
+    }
+
+    public boolean rellenarArepa() {
         return true;
     }
 
@@ -38,7 +49,15 @@ public class CocinaColombiana extends Cocina{
     public void setTipoMaiz(String tipoMaiz) {
         this.tipoMaiz = tipoMaiz;
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+" CocinaColombiana{" + "tipoMaiz=" + tipoMaiz + '}';
+    }
+
+    @Override
+    public void prepararArroz(){
+        System.out.println("Preparando arroz dulce...");
+    }
     
-    
-   
 }
